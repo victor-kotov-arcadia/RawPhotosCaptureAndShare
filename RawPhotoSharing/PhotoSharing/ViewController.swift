@@ -136,26 +136,23 @@ class ViewController: UIViewController {
         }
 
         guard let rawAssetResource = possibleRawAssetResource else { return }
-        guard let documentURL = try? FileManager.default.url(for: .documentDirectory,
-                                                             in: .userDomainMask,
-                                                             appropriateFor: nil,
-                                                             create: true) else { return }
 
         let options = PHAssetResourceRequestOptions()
         options.isNetworkAccessAllowed = true
-
-        let url = documentURL.appendingPathComponent(rawAssetResource.originalFilename)
-
-        PHAssetResourceManager.default().writeData(for: rawAssetResource, toFile: url, options: options) { error in
+        
+        
+        var vc: UIActivityViewController!
+        var shareData = Data()
+        
+        PHAssetResourceManager.default().requestData(for: rawAssetResource, options: options, dataReceivedHandler: { (data) in
+            shareData.append(data)
+        }, completionHandler: { (error) in
             DispatchQueue.main.async {
-                let vc = UIActivityViewController(activityItems: [url], applicationActivities: nil)
-                vc.completionWithItemsHandler = { _, _, _, _ in
-                    self.dismiss(animated: true, completion: nil)
-                }
+                vc = UIActivityViewController(activityItems: [shareData], applicationActivities: nil)
                 vc.excludedActivityTypes = [.openInIBooks, .markupAsPDF, .saveToCameraRoll]
                 self.present(vc, animated: true, completion: nil)
             }
-        }
+        })
     }
 }
 
