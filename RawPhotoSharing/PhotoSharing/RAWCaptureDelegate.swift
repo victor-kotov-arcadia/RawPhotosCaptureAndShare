@@ -13,6 +13,7 @@ class RAWCaptureDelegate: NSObject, AVCapturePhotoCaptureDelegate {
 
     private var rawFileURL: URL?
     private var compressedData: Data?
+    private let customizer = CapturePhotoFileDataRepresentationCustomizer()
 
     var didFinish: (() -> Void)?
 
@@ -27,7 +28,7 @@ class RAWCaptureDelegate: NSObject, AVCapturePhotoCaptureDelegate {
         }
 
         // Access the file data representation of this photo.
-        guard let photoData = photo.fileDataRepresentation() else {
+        guard let photoData = photo.fileDataRepresentation(with: customizer) else {
             print("No photo data to write.")
             return
         }

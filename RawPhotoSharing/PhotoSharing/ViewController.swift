@@ -97,6 +97,14 @@ class ViewController: UIViewController {
         let photoSettings = AVCapturePhotoSettings(rawPixelFormatType: rawFormat,
                                                    processedFormat: processedFormat)
 
+        if photoSettings.availablePreviewPhotoPixelFormatTypes.count > 0 {
+            photoSettings.embeddedThumbnailPhotoFormat = [
+                AVVideoCodecKey: AVVideoCodecType.jpeg,
+                AVVideoWidthKey: 852,
+                AVVideoHeightKey: 640,
+            ]
+        }
+
         // Create a delegate to monitor the capture process.
         let delegate = RAWCaptureDelegate()
         captureDelegates[photoSettings.uniqueID] = delegate

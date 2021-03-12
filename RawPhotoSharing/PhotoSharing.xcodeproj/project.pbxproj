@@ -14,6 +14,7 @@
 		3C804E1C25ECFEA700F498B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C804E1B25ECFEA700F498B0 /* Assets.xcassets */; };
 		3C804E1F25ECFEA700F498B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C804E1D25ECFEA700F498B0 /* LaunchScreen.storyboard */; };
 		3C804E4725ED11B000F498B0 /* RAWCaptureDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C804E4625ED11B000F498B0 /* RAWCaptureDelegate.swift */; };
+		3CD44D7125FBE0E60014D645 /* CapturePhotoFileDataRepresentationCustomizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD44D7025FBE0E60014D645 /* CapturePhotoFileDataRepresentationCustomizer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		3C804E1E25ECFEA700F498B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3C804E2025ECFEA700F498B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C804E4625ED11B000F498B0 /* RAWCaptureDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RAWCaptureDelegate.swift; sourceTree = "<group>"; };
+		3CD44D7025FBE0E60014D645 /* CapturePhotoFileDataRepresentationCustomizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapturePhotoFileDataRepresentationCustomizer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			children = (
 				3C804E1225ECFEA300F498B0 /* AppDelegate.swift */,
 				3C804E1425ECFEA300F498B0 /* SceneDelegate.swift */,
+				3CD44D7025FBE0E60014D645 /* CapturePhotoFileDataRepresentationCustomizer.swift */,
 				3C804E4625ED11B000F498B0 /* RAWCaptureDelegate.swift */,
 				3C804E1625ECFEA300F498B0 /* ViewController.swift */,
 				3C804E1825ECFEA300F498B0 /* Main.storyboard */,
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C804E4725ED11B000F498B0 /* RAWCaptureDelegate.swift in Sources */,
+				3CD44D7125FBE0E60014D645 /* CapturePhotoFileDataRepresentationCustomizer.swift in Sources */,
 				3C804E1725ECFEA300F498B0 /* ViewController.swift in Sources */,
 				3C804E1325ECFEA300F498B0 /* AppDelegate.swift in Sources */,
 				3C804E1525ECFEA300F498B0 /* SceneDelegate.swift in Sources */,
