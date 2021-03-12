@@ -103,7 +103,13 @@ class ViewController: UIViewController {
                 AVVideoWidthKey: 852,
                 AVVideoHeightKey: 640,
             ]
+            photoSettings.rawEmbeddedThumbnailPhotoFormat =  [
+                AVVideoCodecKey: AVVideoCodecType.jpeg,
+                AVVideoWidthKey: 852,
+                AVVideoHeightKey: 640,
+            ]
         }
+
 
         // Create a delegate to monitor the capture process.
         let delegate = RAWCaptureDelegate()
